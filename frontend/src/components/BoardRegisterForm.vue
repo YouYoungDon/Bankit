@@ -1,24 +1,30 @@
 <template>
   <form @submit.prevent="onSubmit">
     <h3>Board Register Form</h3>
-    <table>
-      <tr>
-        <td>Title</td>
-        <td><input type="text" v-model="title"></td>
-      </tr>
-      <tr>
-        <td>Writer</td>
-        <td><input type="text" v-model="writer"></td>
-      </tr>
-      <tr>
-        <td>Content</td>
-        <td><textarea v-model="content" rows="5"></textarea></td>
-      </tr>
-    </table>
+    <form>
+      <v-col cols="12" md="5"><v-text-field
+      type="text"
+      v-model="title"
+      label="title"
+      required
+      ></v-text-field></v-col>
+      <v-col cols="12" md="5"><v-text-field
+      type="text"
+      v-model="writer"
+      label="writer"
+      required
+      ></v-text-field></v-col>
+      <v-col cols="12" md="5" rows="7"><v-text-field
+      type="text"
+      v-model="content"
+      label="content"
+      required
+      ></v-text-field></v-col>
+    </form>
 
     <div>
-      <button type="submit">Register</button>
-      <router-link :to="{ name: 'BoardListPage' }">
+      <v-btn depressed color="primary" type="submit">Register</v-btn>
+      <router-link :to="{ name: 'Bank' }">
         Cancel
       </router-link>
     </div>

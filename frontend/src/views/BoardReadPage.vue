@@ -1,16 +1,18 @@
 <template>
-  <div align="center">
-    <h2>Detailed Board List</h2>
-    <board-read v-if="board" :board="board"/>
-    <p v-else>Loading ...</p>
-    <router-link :to="{ name: 'BoardModifyPage', params: { boardNo } }">
-      Edit
-    </router-link>
-    <button @click="onDelete">Delete</button>
-    <router-link :to="{ name: 'BoardListPage' }">
-      List
-    </router-link>
-  </div>
+  <v-app id="inspire">
+    <div align="center">
+      <h2>Detailed Board List</h2>
+      <board-read v-if="board" :board="board"/>
+      <p v-else>Loading ...</p>
+      <router-link :to="{ name: 'BoardModifyPage', params: { boardNo } }">
+        Edit
+      </router-link>
+      <v-btn depressed color="error" @click="onDelete">Delete</v-btn>
+      <router-link :to="{ name: 'Bank' }">
+        List
+      </router-link>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -48,7 +50,7 @@ export default {
       axios.delete(`http://localhost:7777/boards/${boardNo}`)
         .then(res => {
           alert('Delete Success')
-          this.$router.push({ name: 'BoardListPage' })
+          this.$router.push({ name: 'Bank' })
         })
         .catch(err => {
           alert(err.response.data.message)

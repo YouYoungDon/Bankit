@@ -1,6 +1,5 @@
 <template>
   <div align="center">
-    <h2>Register First Adminstartor</h2>
     <admin-setup-form @submit="onSubmit"/>
   </div>
 </template>
@@ -25,7 +24,7 @@ export default {
         .then(res => {
           alert('Register Success')
           this.$router.push({
-            name: 'Home'
+            name: 'Bank'
           })
         })
         .catch(err => {

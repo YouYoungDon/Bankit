@@ -1,11 +1,13 @@
 <template>
-  <div id="board">
-    <h2>Board List</h2>
-    <router-link :to="{ name: 'BoardRegisterPage' }">
-      Create New Board
-    </router-link>
-    <board-list :boards="boards"/>
-  </div>
+  <v-app id="inspire">
+    <div id="board">
+      <h2>Board List</h2>
+      <router-link :to="{ name: 'BoardRegisterPage' }">
+        Create New Board
+      </router-link>
+      <board-list :boards="boards"/>
+    </div>
+  </v-app>
 </template>
 
 <script>

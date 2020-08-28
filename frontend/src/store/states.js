@@ -17,5 +17,7 @@ export default {
   news: [],
   homeNews: [],
   savedNews: [],
-  savedNewsContents: []
+  savedNewsContents: [],
+  // Bank
+  checkedCards: []
 }

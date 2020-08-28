@@ -25,6 +25,10 @@ import VuetifyBoardListPage from '../views/VuetifyBoardListPage.vue'
 // For Crawling
 import CrawlCategory from '../views/CrawlCategory.vue'
 
+// Bank
+import Bank from '../views/Bank.vue'
+import BankCart from '../views/BankCart.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +36,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Bank',
+    name: 'Bank',
+    component: Bank
+  },
+  {
+    path: '/BankCart',
+    name: 'BankCart',
+    component: BankCart
   },
   {
     path: '/about',

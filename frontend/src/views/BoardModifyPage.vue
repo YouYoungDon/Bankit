@@ -1,9 +1,11 @@
 <template>
-  <div align="center">
-    <h2>Board Modification</h2>
-    <board-modify-form v-if="board" :board="board" @submit="onSubmit"/>
-    <p v-else>Loading ...</p>
-  </div>
+  <v-app id="inspire">
+    <div align="center">
+      <h2>Board Modification</h2>
+      <board-modify-form v-if="board" :board="board" @submit="onSubmit"/>
+      <p v-else>Loading ...</p>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -42,7 +44,7 @@ export default {
           alert('Modify Success')
           console.log('res: ' + res.data)
           this.$router.push({
-            name: 'BoardReadPage',
+            name: 'Bank',
             params: { boardNo: res.data.boardNo.toString() }
           })
         })

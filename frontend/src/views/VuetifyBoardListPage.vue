@@ -1,11 +1,13 @@
 <template>
-  <div align="center">
-    <h2>Vuetify Real Board List</h2>
-    <router-link :to="{ name: 'BoardRegisterPage' }">
-      Create New Board
-    </router-link>
-    <board-list-page-form :list-array="pageArray"/>
-  </div>
+  <v-app id="inspire">
+    <div align="center">
+      <h2>Vuetify Real Board List</h2>
+      <router-link :to="{ name: 'BoardRegisterPage' }">
+        Create New Board
+      </router-link>
+      <board-list-page-form :list-array="pageArray"/>
+    </div>
+  </v-app>
 </template>
 
 <script>

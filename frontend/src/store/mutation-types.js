@@ -28,3 +28,6 @@ export const CRAWLSTART = 'CRAWLSTART'
 export const FINDONE = 'FINDONE'
 export const FINDHOME = 'FINDHOME'
 export const BOOLEAN = 'BOOLEAN'
+
+// bank
+export const JJIMSTART = 'JJIMSTART'

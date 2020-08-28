@@ -116,5 +116,8 @@ export default {
   },
   [DESTROY_MY_INFO] (state) {
     state.myinfo = null
+  },
+  setCheckCards (state, checkedCards) {
+    state.checkedCards = checkedCards
   }
 }

@@ -17,7 +17,8 @@ import {
   /* Crawl */
   FINDONE,
   FINDHOME,
-  CRAWLSTART
+  CRAWLSTART,
+  JJIMSTART
 } from './mutation-types'
 
 import axios from 'axios'

@@ -1,8 +1,10 @@
 <template>
-  <div align="center">
-    <h2>Board Register</h2>
-    <board-register-form @submit="onSubmit"/>
-  </div>
+  <v-app id="inspire">
+    <div align="center">
+      <h2>Board Register</h2>
+      <board-register-form @submit="onSubmit"/>
+    </div>
+  </v-app>
 </template>
 
 <script>

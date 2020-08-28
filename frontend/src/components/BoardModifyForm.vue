@@ -26,7 +26,7 @@
       </table>
 
       <div>
-        <button type="submit">Modify</button>
+        <v-btn depressed color="indigo" type="submit">Modify</v-btn>
         <router-link :to="{ name: 'BoardReadPage', params: { boardNo: board.boardNo.toString() } }">
           Cancel
         </router-link>

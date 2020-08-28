@@ -1,21 +1,30 @@
-<template>
-  <form @submit.prevent="submit">
-    <table>
-      <tr>
-        <td>Id</td>
-        <td><input type="text" v-model="userid"></td>
-      </tr>
-      <tr>
-        <td>Password</td>
-        <td><input type="password" v-model="password"></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="center">
-          <button type="submit">Login</button>
-        </td>
-      </tr>
-    </table>
-  </form>
+<template align="center">
+  <v-app id="inspire"><br>
+    <h1 class="font-weight-light">Login</h1>
+    <form @submit.prevent="submit">
+      <v-col cols="12" md="2"><v-text-field
+      type="text"
+      v-model="userid"
+      label="ID"
+      required
+      ></v-text-field></v-col>
+      <v-col cols="12" md="2"><v-text-field
+      type="text"
+      v-model="password"
+      label="Password"
+      required
+      ></v-text-field></v-col>
+      <v-btn
+       type="submit"
+       color="red"
+       class="mr-4"
+      >
+       Login</v-btn>
+       <router-link :to="{ name: 'Bank' }">
+         Cancel
+       </router-link>
+    </form>
+  </v-app>
 </template>
 
 <script>
